@@ -2,14 +2,35 @@
 
 {% block body %}
 
-    <div>
+    <div id="blog_sidebar" class="right">
+        <p>Projekte</p>
+        <hr>
+        <ul>
+            <li><a href="">Lorem ipsum</a></li>
+            <li><a href="">Lorem ipsum dolor</a></li>
+        </ul>
+        <p>Archiv</p>
+        <hr>
+        <ul>
+            <li><a href="">Lorem ipsum</a></li>
+            <li><a href="">Lorem ipsum dolor</a></li>
+        </ul>
+        <p>Blogroll</p>
+        <hr>
+        <ul>
+            <li><a href="">Lorem ipsum</a></li>
+            <li><a href="">Lorem ipsum dolor</a></li>
+        </ul>
 
         {% block content %} {% endblock %}
 
-        <div style="float: right; border: 1px solid">
-            <p>Menu</p>
-        </div>
-
     </div>
+
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+
+    <link href="{{ asset('bundles/webdevblog/css/layout.css') }}" rel="stylesheet" type="text/css">
 
 {% endblock %}

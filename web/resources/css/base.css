@@ -1,0 +1,125 @@
+*
+{
+    font-family: "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+}
+
+pre
+{
+    font-family: monospace;
+}
+
+/*
+ * global classes
+ */
+.left
+{
+    float: left;
+}
+
+.right
+{
+    float: right;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.small
+{
+    font-size: 0.8em;
+}
+
+.no_margin
+{
+    margin: 0;
+}
+
+.italic
+{
+    font-style: italic;
+}
+
+body
+{
+    background-color: #EAEAEA;
+    font-size: 15px;
+}
+
+div#container
+{
+    margin: 0 auto;
+    width: 900px;
+}
+
+/*
+ * header
+ */
+
+div#header
+{
+    position: relative;
+}
+
+div#header_font_size
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+div#header_font_size a
+{
+    margin-right: 5px;
+}
+
+div#header_accountbox
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 12px;
+}
+
+ul#header_links
+{
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top:0;
+    font-size: 12px;
+}
+
+div#header_text
+{
+    margin: 0 auto;
+    text-align: center;
+    width: 325px;
+}
+
+div#header_text h1
+{
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+div#header_text p
+{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+/*
+ * body
+ */
+div#body
+{
+    padding-top: 15px;
+    border-top: 1px solid;
+    clear: both;
+}

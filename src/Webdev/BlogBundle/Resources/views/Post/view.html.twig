@@ -1,9 +1,69 @@
 {% extends 'WebdevBlogBundle::layout.html.twig' %}
 
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
 {% block content %}
-    <h2>{{ post.title }}</h2>
-    <p>
+
+    {# meta data #}
+    <div id="blog_post_metadata" class="left small">
+        <table>
+            <tbody>
+            <tr>
+                <td>Erstellt am</td>
+                <td>{{ post.createdAt | date('d.m.Y') }}</td>
+            </tr>
+            <tr>
+                <td>Geändert am</td>
+                <td>{{ post.updatedAt | date('d.m.Y') }}</td>
+            </tr>
+            <tr>
+                <td>Klicks</td>
+                <td>{{ post.clicks }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>Trackbacks (<a href="">URL</a>)</p>
+        <ul class="no_margin">
+            <li><a href="">Lorem Ipsum</a></li>
+            <li><a href="">Lorem Ipsum dolor</a></li>
+        </ul>
+    </div>
+
+    {# post content #}
+    <h2 class="no_margin">{{ post.title }}</h2>
+    <div id="blog_post_content">
         {{ post.content | raw }}
-    </p>
-    <p>Klicks: {{ post.clicks }}</p>
+    </div>
+
+    {# comments #}
+    <h3 class="no_margin clear">Kommentare</h3>
+    <hr class="no_margin"/>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+
+    {{ parent() }}
+
+    {% stylesheets %}
+
+        <link href="{{ asset_url }}" rel="stylesheet" type="text/css">
+
+    {% endstylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+
+    {% javascripts %}
+
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+
+    {% endjavascripts %}
+
 {% endblock %}
